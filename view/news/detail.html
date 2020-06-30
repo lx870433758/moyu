@@ -1,0 +1,69 @@
+{{define "news/detail.html"}}
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://www.cdmoyu.net/show-25-14-1.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{{.detail.Title}}</title>
+    <meta name="keywords" content="标题">
+    <meta name="description" content="{$detail.Intro}">
+{{template "common/style.html" .}}
+    <style type="text/css"></style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+
+{{template "common/head.html" .}}
+
+    <div class="paage-banner1">
+        <img src="/static/index/image/20180928115358701.jpg">
+        <div class="page-ti">
+            <h2>News</h2>
+            <p>新闻动态</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="a_zxlmenu">
+    <div class="a_zxlmenu_t">新闻动态<i class="icon-caret-down"></i></div>
+    <ul class="fl a_zxlmenu_c">
+        <li><a href="/news/lists?type=1" class="aone activetwo">公司动态</a></li>
+        <li><a href="/news/lists?type=2" class="aone ">行业新闻</a></li>
+
+    </ul>
+    <div class="clearboth"></div>
+</section>
+
+
+<section class="sectionny xiangmu-w bk191919">
+    <div class="clearfix inner1200">
+        <h2 class="newdtitle">{{.detail.Title}}</h2>
+        <div class="new-deta">
+        {{.desc}}
+        </div>
+        <div class="moreye">
+        {{if ne .last.Id 0}}
+            <a href="/news/detail?id={{.last.Id}}" class="fl">上一篇：{{.last.Title}}</a>
+        {{end}}
+        {{if ne .next.Id 0}}
+            <a href="/news/detail?id={{.next.Id}}" class="fr">下一篇：{{.next.Title}}</a>
+        {{end}}
+        </div>
+    </div>
+</section>
+
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+</body>
+</html>
+{{end}}

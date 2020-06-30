@@ -1,0 +1,30 @@
+{{define "common/kefu.html"}}
+<div class="fudong">
+    <ul>
+
+        <li class="{{if eq .controller "Index"}}fudong0{{else}}fudong00{{end}}">
+            <div>
+                <img src="/static/index/image/fudong0.png">
+            </div>
+        </li>
+        <li class="fudong1">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$config.qq}&site=qq&menu=yes">
+                <div>
+                    <img src="/static/index/image/fudong1.png">
+                </div>
+            </a>
+        </li>
+        <li class="fudong2">
+            <div>
+                <img src="/static/index/image/fudong2.png">
+            </div>
+        </li>
+        <li class="fudong3">
+            <div>
+                <img src="/static/index/image/fudong3.png">
+                <p>{$config.phone}</p>
+            </div>
+        </li>
+    </ul>
+</div>
+{{end}}

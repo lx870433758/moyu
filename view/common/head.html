@@ -1,0 +1,53 @@
+{{define "common/head.html"}}
+<header class="header">
+    <div class="headerbox">
+        <a href="/">
+            <img src="/static/index/image/20180928103535701.png" alt="白色logo"
+                 class="logo"></a>
+        <ul class="top-nav">
+            <li class="{{if eq .controller "Index"}}active{{end}}">
+                <a class="dea" href="/">首页</a>
+            </li>
+
+            <!--获取第一个子类的 url 字段值-->
+            <!--否则直接得到当前的url-->
+            <li class="{{if eq .controller "Team"}}active{{end}}">
+                <a class="dea" href="/list-2-1">团队简介</a>
+                <ul class="top-nav-se" style="display: none;">
+                    <li><a href="/list-2-1">公司简介</a></li>
+                    <li><a href="/list-39-1">管理团队</a></li>
+                </ul>
+            </li>
+            <li class="{{if eq .controller "Works"}}active{{end}}">
+                <a class="dea" href="/works">项目作品</a>
+                <ul class="top-nav-se" style="display: none;">
+                    <li><a href="/works?type=1">游戏美宣</a></li>
+                    <li><a href="/works?type=2">角色设计</a></li>
+                    <li><a href="/works?type=3">场景设计</a></li>
+                    <li><a href="/works?type=4">UI设计</a></li>
+                </ul>
+            </li>
+
+            <!--获取第一个子类的 url 字段值-->
+            <!--否则直接得到当前的url-->
+            <li class="">
+                <a class="dea" href="/news/lists?type=1">新闻动态</a>
+                <ul class="top-nav-se" style="display: none;">
+                    <li><a href="/news/lists?type=1">公司动态</a></li>
+                    <li><a href="/news/lists?type=2">行业新闻</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="dea" href="/recruitment/lists">招兵买马</a>
+                <ul class="top-nav-se" style="display: none;">
+                </ul>
+            </li>
+            <li class="">
+                <a class="dea" href="/contact">联系我们</a>
+                <ul class="top-nav-se" style="display: none;">
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+{{end}}

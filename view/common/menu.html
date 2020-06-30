@@ -1,0 +1,41 @@
+{{define "common/menu.html"}}
+<div class="nav_main">
+    <ul>
+        <li>
+            <a href="/" class="active1">首页</a>
+        </li>
+
+        <!--获取第一个子类的 url 字段值-->
+        <!--否则直接得到当前的url-->
+        <li>
+            <a href="/list-2-1.html" class="active1">团队简介</a><b></b>
+            <ul class="ul">
+                <li><a href="/list-2-1.html">公司简介</a></li>
+                <li><a href="/list-39-1.html">管理团队</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/works" class="">项目作品</a><b></b>
+            <ul class="ul">
+                <li><a href="/works?type=1">游戏美宣</a></li>
+                <li><a href="/works?type=2">角色设计</a></li>
+                <li><a href="/works?type=3">场景设计</a></li>
+                <li><a href="/works?type=4">UI设计</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/news/lists?type=1" class="">新闻动态</a><b></b>
+            <ul class="ul">
+                <li><a href="/news/lists?type=1">公司动态</a></li>
+                <li><a href="/news/lists?type=2">行业新闻</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/recruitment/lists" class="">招兵买马</a><b></b>
+        </li>
+        <li>
+            <a href="/contact" class="">联系我们</a><b></b>
+        </li>
+    </ul>
+</div>
+{{end}}

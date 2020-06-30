@@ -1,0 +1,55 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] Loaded HTML Templates (30): 
+	- bottom.html
+	- common/kefu.html
+	- contact.html
+	- team/team.html
+	- common/bottom.html
+	- common/map.html
+	- common/style.html
+	- recruitment/lists.html
+	- intro.html
+	- menu.html
+	- works/works.html
+	- common/menu.html
+	- style.html
+	- contact/contact.html
+	- detail.html
+	- team/intro.html
+	- common/head.html
+	- kefu.html
+	- index.html
+	- news/lists.html
+	- 
+	- head.html
+	- common/phone_head.html
+	- team.html
+	- works.html
+	- index/index.html
+	- news/detail.html
+	- map.html
+	- phone_head.html
+	- lists.html
+
+[GIN-debug] GET    /                         --> gintest/controller.Index (3 handlers)
+[GIN-debug] POST   /liuyan                   --> gintest/controller.Liuyan (3 handlers)
+[GIN-debug] GET    /list-2-1                 --> gintest/controller.Intro (3 handlers)
+[GIN-debug] GET    /list-39-1                --> gintest/controller.Team (3 handlers)
+[GIN-debug] GET    /works                    --> gintest/controller.Works (3 handlers)
+[GIN-debug] GET    /news/lists               --> gintest/controller.NewsList (3 handlers)
+[GIN-debug] GET    /news/detail              --> gintest/controller.NewsDetail (3 handlers)
+[GIN-debug] GET    /recruitment/lists        --> gintest/controller.RecruitmentList (3 handlers)
+[GIN-debug] GET    /contact                  --> gintest/controller.Contact (3 handlers)
+[GIN-debug] GET    /test                     --> gintest/controller.Test (3 handlers)
+[GIN-debug] GET    /category_list            --> gintest/controller.CategoryList (3 handlers)
+[GIN-debug] GET    /category_post            --> gintest/controller.CategoryPost (3 handlers)
+::1 - [Mon, 29 Jun 2020 18:43:59 CST] "GET / HTTP/1.1 200 88.8419ms "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" "
+::1 - [Mon, 29 Jun 2020 18:44:02 CST] "GET /list-2-1 HTTP/1.1 200 69.663455ms "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" "
+::1 - [Mon, 29 Jun 2020 18:44:03 CST] "GET /works HTTP/1.1 200 76.020125ms "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" "
+::1 - [Mon, 29 Jun 2020 18:44:05 CST] "GET /list-2-1 HTTP/1.1 200 67.578864ms "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" "
+::1 - [Mon, 29 Jun 2020 18:44:06 CST] "GET / HTTP/1.1 200 67.385148ms "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" "

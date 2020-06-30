@@ -1,0 +1,92 @@
+{{define "news/lists.html"}}
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.cdmoyu.net/list-25-1.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>公司动态 - {{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{{.config.CompanyName}}">
+    <meta name="description"
+          content="{$configTeam.desc}">
+    {{template "common/style.html" .}}
+    <style type="text/css"></style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+
+    {{template "common/head.html" .}}
+
+    <div class="paage-banner1">
+        <img src="/static/index/image/20180928115358701.jpg">
+        <div class="page-ti">
+            <h2>News</h2>
+            <p>新闻动态</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="a_zxlmenu">
+    <div class="a_zxlmenu_t">新闻动态<i class="icon-caret-down"></i></div>
+    <ul class="fl a_zxlmenu_c">
+        <li><a href="/news/lists?type=1" class="aone {{if eq .types "1"}}activetwo{{end}}">公司动态</a></li>
+        <li><a href="/news/lists?type=2" class="aone {{if eq .types "2"}}activetwo{{end}}">行业新闻</a></li>
+    </ul>
+    <div class="clearboth"></div>
+</section>
+
+
+<section class="sectionny xiangmu-w bk191919">
+    <div class="clearfix inner1200">
+
+
+        <h2 class="h2top">知晓天下，迈向辉煌</h2>
+        <p class="ptop">与您分享更多墨羽动态</p>
+        <div class="page-ul-bx clearfix">
+            <ul class="page-navul">
+                <li class="{{if eq .types "1"}}active{{end}}"><a href="/news/lists?type=1">公司动态</a></li>
+                <li class="{{if eq .types "2"}}active{{end}}"><a href="/news/lists?type=2">行业新闻</a></li>
+
+            </ul>
+        </div>
+
+        <div class="news-list">
+            <ul>
+                {{range $v := .list}}
+                <li>
+                    <a href="/news/detail?id={{$v.Id}}">
+                        <div class="divtop">
+                           <img src="{{$v.Pic}}" alt="{{$v.Title}}"></div>
+                        <div class="divbo">
+                            <h4 class="h4">{{$v.Title}}{</h4>
+                            <p class="npcon">{{$v.Intro}}</p>
+                            <p class="time"><span>{{$v.Ctime}}</span><strong>&gt;</strong></p>
+                        </div>
+                    </a>
+                </li>
+                {{end}}
+            </ul>
+        </div>
+
+        <div class="fanye text-center">
+            <ul class="pagination pagination-lg">
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+</body>
+</html>
+{{end}}

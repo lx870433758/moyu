@@ -1,0 +1,124 @@
+{{define "team/intro.html"}}
+<!DOCTYPE html>
+<!-- saved from url=(0035)/list-2-1.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>公司简介 - {{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{{.config.CompanyName}}">
+    <meta name="description"
+          content="{$configTeam.desc}">
+{{template "common/style.html" .}}
+    <style type="text/css"></style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+
+{{template "common/head.html" .}}
+
+    <div class="about-banner1">
+        <div class="swiper-container index1-swiper about-swiper swiper-container-fade swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms;">
+
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <div class="bkgaosi">
+        </div>
+        <div class="about-banner2" style="left: 120px;">
+            <div class="clearfix inner1200">
+                <div class="swiper-container index1-swiper about2-swiper swiper-container-horizontal">
+                    <div class="swiper-wrapper"
+                         style="transform: translate3d(-2400px, 0px, 0px); transition-duration: 0ms;">
+
+                    {{range $k,$v := .topList}}
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="{{$k}}"
+                             style="width: 1200px;">
+                            <img src="{{$v.Pic}}" alt="{{$v.Pic}}">
+                        </div>
+                    {{end}}
+                    </div>
+                    <div class="swiper-pagination swiper-pagination1 swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                              aria-label="Go to slide 1"></span><span
+                            class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                            aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                    role="button" aria-label="Go to slide 3"></span>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+        </div>
+        <div class="ab-pn">
+            <img src="/static/index/image/ab-pn.png">
+        </div>
+    </div>
+
+    <div class="phone-ab">
+        <div class="swiper-container phab-swiper swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 300ms;">
+            {{range $k,$v := .topList}}
+                <div class="swiper-slide" data-swiper-slide-index="{{$k}}">
+                    <img src="{{$v.Pic}}" alt="{{$v.Pic}}">
+                </div>
+            {{end}}
+            </div>
+            <div class="swiper-pagination swiper-pagination1 swiper-pagination-clickable swiper-pagination-bullets"></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </div>
+</section>
+
+
+<section class="sectionny abw-b bk191919">
+
+    <div class="clearfix inner1200">
+
+
+        <h2 class="h2">游戏美术缔造者</h2>
+        <p class="pt">{{.configteam.Intro}}</p>
+        <ul class="to-ul">
+            <li>团结</li>
+            <li>创新</li>
+            <li>激情</li>
+        </ul>
+        <div><p class="text">
+        {{.configteam.Desc}}
+        </p>
+            <p class="pt2">M O Y U G A M E</p></div>
+
+    </div>
+
+    <div class="clearfix inner1380 ab-w-banner">
+        <div class="ab-bo-banner">
+            <div class="swiper-container abbo-swiper swiper-container-horizontal">
+                <div class="swiper-wrapper"
+                     style="transform: translate3d(-4800px, 0px, 0px); transition-duration: 0ms;">
+                {{range $k2,$v2 := .botList}}
+                    <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="{{$k2}}}"
+                         style="width: 1200px;">
+                        <img src="{{$v2.Pic}}" alt="{{$v2.Pic}}">
+                    </div>
+                {{end}}
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+        <div class="swiper-button-next ab-next" tabindex="0" role="button" aria-label="Next slide"></div>
+        <div class="swiper-button-prev ab-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+    </div>
+
+
+</section>
+
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+
+</body>
+</html>
+
+{{end}}

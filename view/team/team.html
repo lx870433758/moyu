@@ -1,0 +1,108 @@
+{{define "team/team.html"}}
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.cdmoyu.net/list-39-1.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>管理团队 - {{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{{.config.CompanyName}}">
+    <meta name="description"
+          content="{$configTeam.desc}">
+{{template "common/style.html" .}}
+    <style type="text/css">
+        .pagination-lg a {
+            background: #707070;
+            border: 1px solid #707070;
+            color: #fff;
+        }
+
+        .pagination-lg li a, .pagination-lg span {
+            padding: 7px 14px;
+            font-size: 14px;
+            line-height: 1.3333333;
+            margin: 0 5px;
+            border: none;
+        }
+
+        .pagination-lg span {
+            background: #ffdb14;
+            border: 1px solid #ffdb14;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+
+{{template "common/head.html" .}}
+
+    <div class="paage-banner1">
+        <img src="/static/index/image/20180928112812971.jpg">
+        <div class="page-ti">
+            <h2>About us</h2>
+            <p>团队简介</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="a_zxlmenu">
+    <div class="a_zxlmenu_t">团队简介<i class="icon-caret-down"></i></div>
+    <ul class="fl a_zxlmenu_c">
+        <li><a href="http://www.cdmoyu.net/list-2-1" class="aone ">公司简介</a></li>
+        <li><a href="http://www.cdmoyu.net/list-39-1" class="aone activetwo">管理团队</a></li>
+
+    </ul>
+    <div class="clearboth"></div>
+</section>
+
+
+<section class="sectionny xiangmu-w bk191919">
+    <div class="clearfix inner1200">
+
+        <h2 class="h2top">专业美术团队</h2>
+        <p class="ptop">精益求精的工匠精神</p>
+        <ul class="gl-team">
+        {{range $k,$v := .list}}
+            <li>
+                <img src="{{$v.Pic}}" alt="刘淡宁">
+                <p class="p1to">{{$v.Name}}</p>
+                <p class="p1co">{{$v.Job}}</p>
+                <p class="p1co"></p>
+                <p class="p1bo"></p>
+                <p><span style="font-family: 微软雅黑, " microsoft="" font-size:="">{{$v.Intro}}</span>
+                </p>
+                <p></p>
+            </li>
+        {{end}}
+        </ul>
+        <div class="fanye text-center">
+           {{/* {$page|raw}*/}}
+        </div>
+
+    </div>
+</section>
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+<script>
+    $(function () {
+        $('.pagination').addClass("pagination pagination-lg");
+        $('.pagination span').addClass("al");
+        $('.disabled span').css('background', '#707070');
+        $('.disabled span').css('border', '1px solid #707070');
+        $('.disabled span').css('color', '#fff');
+    });
+</script>
+</body>
+</html>
+
+{{end}}

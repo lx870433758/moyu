@@ -1,0 +1,81 @@
+{{define "recruitment/lists.html"}}
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.cdmoyu.net/list-12-1.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>招兵买马 - {{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{{.config.CompanyName}}">
+    <meta name="description"
+          content="{{.configTeam.Desc}}">
+{{template "common/style.html" .}}
+    <style type="text/css"></style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+
+{{template "common/head.html" .}}
+    <div class="paage-banner1">
+        <img src="/static/index/image/20181016043413283.jpg">
+        <div class="page-ti">
+            <h2>RECRUITMENT</h2>
+            <p>招兵买马</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="a_zxlmenu">
+    <div class="a_zxlmenu_t">招兵买马<i class="icon-caret-down"></i></div>
+    <ul class="fl a_zxlmenu_c">
+
+    </ul>
+    <div class="clearboth"></div>
+</section>
+
+
+<section class="sectionny xiangmu-w bk111111">
+    <div class="clearfix inner1200">
+
+
+        <div class="jotile">
+            <img src="/static/index/image/jointi.jpg">
+            <h1 class="h1">加入我们 成为飞梦人</h1>
+        </div>
+        <div class="joinbox">
+            <dl class="a_rlzydiv_c fl">
+            {{range $v :=.list}}
+                <dd>
+                    <div class="div">
+                        <div class="fl s1"><img src="/static/index/image/join.png">{{$v.Job}}</div>
+                        <div class="clearboth"></div>
+                    </div>
+                    <div class="div1" style="display: none;">
+                        <div class="div1_c">
+                           {{$v.Html}}
+                        </div>
+                    </div>
+                </dd>
+            {{end}}
+
+            </dl>
+        </div>
+
+
+    </div>
+</section>
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+
+</body>
+</html>
+{{end}}

@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.phone_nav{ display:none;}
+.hided{ overflow:hidden; width:100%; height:100%; position:fixed;}
+.phone_logo{ height:65px;  background:#fff;}
+.phone_logo .p1 img{ height: 100%}
+
+@media screen and (max-width:1200px) {
+.phone_logo .p1 {padding-top: 15px; height: 54px; display: block;}
+.in_top .heard{ display:none;}
+.phone_logo {width: 100%;padding: 0 20px;box-sizing: border-box;}
+
+.phone_nav{display:block; position:fixed; width:100%; top:0;left:0; display:block; transition-delay:0.7s; -webkit-transition-delay:0.7s; z-index:9999; border-bottom: 2px solid #e4e4e4;background: }
+
+/*导航按钮*/
+.phone_nav .nav_but_box{ display:block; position:absolute; width:30px; height:30px; right:20px; top:20px; z-index:1;
+transition:all 0.7s; -webkit-transition:all 0.7s;}
+.phone_nav .nav_but { display:inline-block; position:relative;width:20px; height:2px; z-index:2; margin:13px 0 0 5px; background:#996633;
+-webkit-transition-property: background-color, -webkit-transform;
+transition-property: background-color, -webkit-transform;
+transition-property: background-color, transform;
+transition-property: background-color, transform, -webkit-transform;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;}
+.phone_nav .nav_but:before,.nav_but:after {content: ''; display:block; width:20px; height:2px; position:absolute; background:#996633;
+transition-property: margin, -webkit-transform; -webkit-transition-property: margin, -webkit-transform;
+transition-property: margin, transform; transition-property: margin, transform, -webkit-transform;
+transition-duration: 300ms; -webkit-transition-duration: 300ms;}
+.phone_nav .nav_but:before{margin-top:-5px;}
+.phone_nav .nav_but:after {margin-top:5px;}
+
+/*栏目名称*/
+.phone_nav .nav_main{height:100%; position:fixed;  left:0; opacity:0; width:0; transition:all 0.4s ease 0.3s; -webkit-transition:all 0.4s ease 0.3s; background:rgba(206,175,89,0.95); overflow:hidden;}
+.phone_nav .nav_main ul{ padding:0 20px; margin-top:40px;}
+.phone_nav .nav_main li a{background-position:left; color:#fff; height:46px; line-height:46px; display:inline-block; background-size:32px; background-repeat:no-repeat; font-weight:bold;}
+.phone_nav .nav_main .ss{border:1px solid #fff; margin-top:20px;}
+.phone_nav .nav_main .ss .p2{ float:right;}
+.phone_nav .nav_main .ss .p2 input{ border:0; background:url("../image/app_ss1.png"/) center no-repeat; width:34px; height:34px;}
+.phone_nav .nav_main .ss .p1{ display:block; margin:0 34px 0 5px; }
+.phone_nav .nav_main .ss .p1 input{ width:100%; height:34px; line-height:34px; background:none; border:0; font-family:"Microsoft YaHei"; font-size:14px; color:#fff;}
+.phone_nav .nav_main li b{ display:inline-block; position:absolute; right:10px; top:0px; width:50%; height:50px; background: url("../image/lmfooter_bottom.png"/) center right no-repeat; z-index:99;}
+
+.phone_nav .nav_main .ul{padding:0 0 0px 40px; margin:0;  max-height:0; overflow:hidden; transition:max-height 0.4s; -webkit-transition:max-height 0.4s;}
+.phone_nav .nav_main .ul li{ padding:0; border-bottom:0; transform:translateX(0px); -webkit-transform:translateX(0px);}
+.phone_nav .nav_main .ul li a{ padding:0; height:auto; line-height:30px; font-weight:normal}
+
+.phone_nav .nav_main .b_one .ul{ max-height:300px; padding:0 0 0px 40px; margin-bottom:10px;}
+
+
+.phone_nav .nav_main li{ transform:translateX(100px); -webkit-transform:translateX(100px); transition:all 0.8s ease; -webkit-transition:all 0.8s ease; border-bottom:1px solid rgba(225,225,225,0.5); padding:0 20px; position:relative;}
+.phone_nav .nav_main li:nth-of-type(1){ transition-delay:0.1s; -webkit-transition-delay:0.1s; }
+.phone_nav .nav_main li:nth-of-type(2){ transition-delay:0.2s; -webkit-transition-delay:0.2s; }
+.phone_nav .nav_main li:nth-of-type(3){ transition-delay:0.3s; -webkit-transition-delay:0.3s; }
+.phone_nav .nav_main li:nth-of-type(4){ transition-delay:0.4s; -webkit-transition-delay:0.4s; }
+.phone_nav .nav_main li:nth-of-type(5){ transition-delay:0.5s; -webkit-transition-delay:0.5s; }
+.phone_nav .nav_main li:nth-of-type(6){ transition-delay:0.6s; -webkit-transition-delay:0.6s; }
+.phone_nav .nav_main li:nth-of-type(7){ transition-delay:0.6s; -webkit-transition-delay:0.6s; }
+.phone_nav .nav_main li:nth-of-type(8){ transition-delay:0.6s; -webkit-transition-delay:0.6s; }
+.phone_nav .nav_main li:nth-of-type(9){ transition-delay:0.6s; -webkit-transition-delay:0.6s; }
+.phone_nav .nav_main li:nth-of-type(10){ transition-delay:0.6s; -webkit-transition-delay:0.6s; }
+
+
+/*打开样式*/
+.phone_nav_one{background:#231815;  transition-delay:0s; -webkit-transition-delay:0s; }
+.phone_nav_one .nav_main {opacity:1; width:100%; overflow:inherit;}
+.phone_nav_one .nav_but{background: rgba(0, 0, 0, 0); }
+.phone_nav_one .nav_but:before {margin-top: 0; transform:rotate(45deg); -webkit-transform:rotate(45deg);}
+.phone_nav_one .nav_but:after {margin-top:0; transform:rotate(-45deg); -webkit-transform:rotate(-45deg);}
+.phone_nav_one .nav_but_box { opacity:0.8;}
+.phone_nav_one .nav_main li{ transform:translateX(0); -webkit-transform:translateX(0);}
+}
+
+
+@media screen and (max-width:758px){/*--768-0--*/
+
+.phone_nav .nav_but_box{ top:17px; right:10px;}
+.phone_nav .nav_main ul{ margin-top:20px; height:300px; overflow-y:auto; box-sizing:border-box;}
+.phone_nav .nav_main .b_one .ul{ height:auto;}
+
+}
+
+@media screen and (max-width:470px){/*--768-0--*/
+.phone_logo {padding: 0 10px}
+.phone_nav .nav_main ul{ height:410px;}
+.phone_nav .nav_main .b_one .ul{ height:auto;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,250 @@
+{{define "works/works.html"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>项目作品 - {{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{{.config.CompanyName}}">
+    <meta name="description"
+          content="{{.configTeam.Desc}}">
+{{template "common/style.html" .}}
+    <style type="text/css"></style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+{{template "common/head.html" .}}
+    <div class="paage-banner1">
+        <img src="/static/index/image/20181016053226369.jpg">
+        <div class="page-ti">
+            <h2>OUR WORKS</h2>
+            <p>项目作品</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="a_zxlmenu">
+    <div class="a_zxlmenu_t">项目作品<i class="icon-caret-down"></i></div>
+    <ul class="fl a_zxlmenu_c">
+        <li><a href="/works?type=1" class="aone ">游戏美宣</a></li>
+        <li><a href="/works?type=2" class="aone ">角色设计</a></li>
+        <li><a href="/works?type=3" class="aone ">场景设计</a></li>
+        <li><a href="/works?type=4" class="aone ">UI设计</a></li>
+
+    </ul>
+    <div class="clearboth"></div>
+</section>
+
+
+<section class="sectionny xiangmu-w bk191919">
+
+    <div class="clearfix inner1200">
+        <h2 class="h2top">缔造美丽的虚拟世界</h2>
+        <p class="ptop">用心刻画，一笔一世界</p>
+        <div class="page-ul-bx clearfix">
+            <ul class="page-navul">
+                <li class="{{if eq .types "1"}}active{{end}}"><a href="/works?type=1">游戏美宣</a></li>
+                <li class="{{if eq .types "2"}}active{{end}}"><a href="/works?type=2">角色设计</a></li>
+                <li class="{{if eq .types "3"}}active{{end}}"><a href="/works?type=3">场景设计</a></li>
+                <li class="{{if eq .types "4"}}active{{end}}"><a href="/works?type=4">UI设计</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="lanren">
+        <div class="hidden">
+            <ul class="in-zp-ul gallery">
+            {{range $v := .list}}
+                <li>
+                    <a href="{{$v.Pic}}">
+                        <img src="{{$v.Pic}}" alt="{{$v.Id}}">
+                        <div class="div">
+                            <div class="ndiv">
+                                <h3>{{$v.Id}}</h3>
+                                <h4></h4>
+                                <b>查看详情</b>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            {{end}}
+            </ul>
+        </div>
+        <ul class="in-zp-ul gallery">
+
+        </ul>
+        <p class="morep"><a href="javascript:;" onclick="lanren.loadMore();">加载更多</a></p>
+    </div>
+
+</section>
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+
+<script>
+    var win_width1 = $(window).width();
+    if (win_width1 > 1024) {
+        var _content = []; //临时存储li循环内容
+        var lanren = {
+            _default: 10, //默认显示图片个数
+            _loading: 5,  //每次点击按钮后加载的个数
+            init: function () {
+                var lis = $(".lanren .hidden ul.in-zp-ul  li");
+                $(".lanren ul.in-zp-ul").html("");
+                for (var n = 0; n < lanren._default; n++) {
+                    lis.eq(n).appendTo(".lanren ul.in-zp-ul");
+                }
+                $(".lanren ul.in-zp-ul img").each(function () {
+                    $(this).attr('src', $(this).attr('realSrc'));
+                })
+                for (var i = lanren._default; i < lis.length; i++) {
+                    _content.push(lis.eq(i));
+                }
+                $(".lanren .hidden").html("");
+            },
+
+            loadMore: function () {
+                var mLis = $(".lanren ul.in-zp-ul li").length;
+
+                for (var i = 0; i < lanren._loading; i++) {
+                    var target = _content.shift();
+                    if (!target) {
+                        $('.lanren .morep a').html("全部加载完毕");
+                        break;
+                    }
+                    $(".lanren ul.in-zp-ul").append(target);
+                    $(".lanren ul.in-zp-ul div").eq(mLis + i).each(function () {
+                        $(this).attr('src', $(this).attr('realSrc'));
+                    });
+                }
+            }
+        }
+        lanren.init();
+        $('body').on('click', '.in-zp-ul li a', function () {
+            var videoUrl = $(this).attr("data-url");
+            $("#video_yscj").attr("src", videoUrl);
+            $(".video_div").stop(false, true).animate({"top": "0px"}, 500);
+        });
+
+    }
+    if (win_width1 < 1024) {
+
+        var _content1 = []; //临时存储li循环内容
+        var lanren1 = {
+            _default1: 4, //默认显示图片个数
+            _loading1: 2,  //每次点击按钮后加载的个数
+            init: function () {
+                var lis = $(".lanren .hidden ul.in-zp-ul  li");
+                console.log(lis);
+                $(".lanren ul.in-zp-ul").html("");
+                for (var n = 0; n < lanren1._default1; n++) {
+                    lis.eq(n).appendTo(".lanren ul.in-zp-ul");
+                }
+                $(".lanren ul.in-zp-ul img").each(function () {
+                    $(this).attr('src', $(this).attr('realSrc'));
+                })
+                for (var i = lanren1._default1; i < lis.length; i++) {
+                    _content1.push(lis.eq(i));
+                }
+                $(".lanren .hidden").html("");
+            },
+
+            loadMore: function () {
+                var mLis = $(".lanren ul.in-zp-ul li").length;
+                for (var i = 0; i < lanren1._loading1; i++) {
+                    var target = _content1.shift();
+                    if (!target) {
+                        $('.lanren .morep a').html("全部加载完毕");
+                        break;
+                    }
+                    $(".lanren ul.in-zp-ul").append(target);
+                    $(".lanren ul.in-zp-ul div").eq(mLis + i).each(function () {
+                        $(this).attr('src', $(this).attr('realSrc'));
+                    });
+                }
+            }
+        }
+        lanren1.init();
+        $('body').on('click', '.in-zp-ul li a', function () {
+            var videoUrl = $(this).attr("data-url");
+            $("#video_yscj").attr("src", videoUrl);
+            $(".video_div").stop(false, true).animate({"top": "0px"}, 500);
+        });
+
+    }
+
+    $(function () {
+        var ulindex = 1;
+        var win_width = $(window).width();
+        setTimeout(function () {
+            var ultop = $('.in-zp-ul').offset().top;
+            var ultopli = $('.in-zp-ul li').outerHeight();
+
+            if (win_width >= 1200) {
+                $(window).scroll(function () {
+                    var top = $(window).scrollTop();
+
+                    if (top >= ultop - 300 && ulindex == 1) {
+
+                        lanren.loadMore();
+                        ulindex = ulindex + 1;
+                    }
+                    if (top >= (ultop + (ultopli * (ulindex - 1))) - 300 && ulindex != 1) {
+
+                        lanren.loadMore();
+                        ulindex = ulindex + 1;
+                    }
+                });
+            }
+            if (768 < win_width < 1200) {
+                $(window).scroll(function () {
+                    var top = $(window).scrollTop();
+
+                    if (top >= ultop + (ultopli) && ulindex == 1) {
+
+                        lanren1.loadMore();
+                        ulindex = ulindex + 1;
+                    }
+
+                    if (top >= (ultop + (ultopli * (ulindex - 1))) && ulindex != 1) {
+
+                        lanren1.loadMore();
+                        ulindex = ulindex + 1;
+                    }
+                });
+            }
+            if (win_width < 768) {
+                $(window).scroll(function () {
+                    var top = $(window).scrollTop();
+
+                    if (top >= ultop + (ultopli) - 100 && ulindex == 1) {
+
+                        lanren1.loadMore();
+                        ulindex = ulindex + 1;
+                    }
+                    console.log((ultop + (ultopli * (ulindex - 1))) - 200);
+                    if (top >= (ultop + (ultopli * (ulindex - 1))) - 200 && ulindex != 1) {
+
+                        lanren1.loadMore();
+                        ulindex = ulindex + 1;
+                    }
+                });
+            }
+
+
+        }, 500);
+
+    })
+
+</script>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,669 @@
+{{define "index/index.html"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{$config.company_name}">
+    <meta name="description"
+          content="{$configTeam.desc}">
+{{template "common/style.html" .}}
+</head>
+
+<body style="" class="body_nav">
+<div class="loading" style="">
+    <div class="spinner" style="left: 499px; top: 386px; opacity: 1;">
+        <div><img src="/static/index/image/20181019110030515.png" alt="logo" class="loadingimg"></div>
+    </div>
+</div>
+<div class="phone_nav" style="box-shadow: rgb(204, 204, 204) 2px 2px;">
+    <div class="phone_logo"><span class="p1"><a href="/" title="logo"><img
+            src="/static/index/image/20181019110030515.png" alt="logo"></a></span></div>
+    <div class="nav_but_box"><span class="nav_but"></span></div>
+{{template "common/menu.html" .}}
+</div>
+
+
+<div id="contBox">
+
+
+    <section class="section section1">
+    {{template "common/head.html" .}}
+        <div class="index-banner">
+
+            <div class="swiper-container index-swiper swiper-no-swiping swiper-container-horizontal">
+                <div class="inb-tf" style="top: 181px;">
+                    <img src="/static/index/image/index-bkt.png">
+                    <ul class="ul">
+                        <li class="active">
+                            <a href="/works">查看作品</a>
+                        </li>
+                        <li>
+                            <a href="/contact">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-wrapper"
+                     style="transform: translate3d(-1082px, 0px, 0px); transition-duration: 0ms;">
+                {{range .bannerList}}
+                    <div class="swiper-slide "
+                         style="background: url('{{.Pic}}'); width: 541px;"
+                         data-swiper-slide-index="{$k}">
+                        <img class="inmg1" src="{{.Pic}}" alt="banner4">
+                    </div>
+                {{end}}
+                </div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button"
+                        aria-label="Go to slide 1"></span><span
+                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                        aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                role="button" aria-label="Go to slide 3"></span><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+    </section>
+
+
+    <section class="section section2 bk191919">
+
+        <div class="clearfix inner1380">
+
+
+            <div class="seciton-tilte">
+
+                <p><img src="/static/index/image/team.png"></p>
+
+                <h4>Our mission is the creator of virtual world beauty, the top game concept design team.</h4>
+
+            </div>
+
+            <div class="teambox clearfix">
+
+                <div class="fl"><a href="/list-2-1.html"><img
+                        src="static/index/image/20181012055210462.png" alt="{$config.company_name}"></a></div>
+
+                <div class="ri">
+
+                    <div><p>
+                    {{.configteam.Desc}}
+                    </div>
+
+                    <div class="btna"><a href="/list-2-1.html">查看详情+</a></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="section section3 bk191919">
+
+        <div class="seciton-tilte">
+
+            <p><img src="/static/index/image/fuwu.png"></p>
+
+            <h4>OUR MISSION IS THE CREATOR OF VIRTUAL WORLD BEAUTY, THE TOP GAME CONCEPT DESIGN TEAM.</h4>
+
+        </div>
+
+        <ul class="in-fuw-ul">
+
+
+            <li>
+
+                <img class="top-img" src="/static/index/image/20180928091839622.jpg" alt="原画设计">
+
+                <div class="de-con">
+
+                    <img src="/static/index/image/se-ic1.png">
+
+                    <h3>原画设计</h3>
+
+                    <p>original design</p>
+
+                </div>
+
+                <div class="mos-wcon">
+
+                    <div class="mos-con "><h4>角色、场景、卡牌美宣、图标、UI&nbsp;</h4>
+                        <p>（包含中式、欧美写实，Q版卡通等风格）的设定、概念设计以及宣传的制作</p></div>
+
+                    <h3 class="h3">原画设计</h3>
+
+                    <p class="p">original design</p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <img class="top-img" src="/static/index/image/20180928091823494.jpg" alt="模型设计">
+
+                <div class="de-con">
+
+                    <img src="/static/index/image/se-ic2.png">
+
+                    <h3>模型设计</h3>
+
+                    <p>model design</p>
+
+                </div>
+
+                <div class="mos-wcon">
+
+                    <div class="mos-con "><h4>2.5D、3D手绘和次世代</h4>
+                        <p>（角色、场景、道具、机械）的模型以及贴图制作</p></div>
+
+                    <h3 class="h3">模型设计</h3>
+
+                    <p class="p">model design</p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <img class="top-img" src="/static/index/image/20180928091800632.jpg" alt="动画设计">
+
+                <div class="de-con">
+
+                    <img src="/static/index/image/se-ic3.png">
+
+                    <h3>动画设计</h3>
+
+                    <p>animation design</p>
+
+                </div>
+
+                <div class="mos-wcon">
+
+                    <div class="mos-con "><h4>人物造型设计和场景设计</h4>
+                        <p>（使静态的人物、场景在二维、三维中连贯的运动）</p></div>
+
+                    <h3 class="h3">动画设计</h3>
+
+                    <p class="p">animation design</p>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <img class="top-img" src="/static/index/image/20180928091556431.jpg" alt="其他设计">
+
+                <div class="de-con">
+
+                    <img src="/static/index/image/se-ic4.png">
+
+                    <h3>其他设计</h3>
+
+                    <p>other design</p>
+
+                </div>
+
+                <div class="mos-wcon">
+
+                    <div class="mos-con "><p>即将提供服务</p></div>
+
+                    <h3 class="h3">其他设计</h3>
+
+                    <p class="p">other design</p>
+
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </section>
+
+
+    <section class="section section4 bk191919">
+
+        <div class="seciton-tilte">
+
+            <p><img src="/static/index/image/zuoping.png"></p>
+
+            <h4>Our mission is the creator of virtual world beauty, the top game concept design team.</h4>
+
+        </div>
+
+        <!-- <div class="in-zp-swiper">
+
+                 <div class="swiper-container zuoping-swiper">
+
+                    <div class="swiper-wrapper">
+                    </div>
+
+                    <div class="swiper-pagination swiper-pagination1"></div>
+
+                </div>
+
+            </div>-->
+        <div class="in-zp-swiper">
+            <div class="swiper-container zuoping-swiper swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(-571px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8"
+                         style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                          src="/static/index/image/20190903110359316.jpg"
+                                                                          alt="2"></div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9"
+                         style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                          src="/static/index/image/20190903110241421.jpg"
+                                                                          alt="1"></div>
+                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0"
+                         style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                          src="/static/index/image/20190903110802879.jpg"
+                                                                          alt="10"></div>
+                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1"
+                         style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                          src="/static/index/image/20190903110726992.jpg"
+                                                                          alt="9"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="2" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110623960.jpg" alt="8"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="3" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110553982.jpg" alt="7"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="4" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110527423.jpg" alt="6"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110508169.jpg" alt="5"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="6" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110445422.jpg" alt="4"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="7" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110425290.jpg" alt="3"></div>
+                    <div class="swiper-slide" data-swiper-slide-index="8" style="width: 255.5px; margin-right: 30px;">
+                        <img class="inmg1" src="/static/index/image/20190903110359316.jpg" alt="2"></div>
+                    <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9"
+                         style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                          src="/static/index/image/20190903110241421.jpg"
+                                                                          alt="1"></div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                         data-swiper-slide-index="0" style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                                                      src="/static/index/image/20190903110802879.jpg"
+                                                                                                      alt="10"></div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                         data-swiper-slide-index="1" style="width: 255.5px; margin-right: 30px;"><img class="inmg1"
+                                                                                                      src="/static/index/image/20190903110726992.jpg"
+                                                                                                      alt="9"></div>
+                </div>
+                <div class="swiper-pagination swiper-pagination1 swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                          aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                  role="button" aria-label="Go to slide 2"></span><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button"
+                        aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                role="button" aria-label="Go to slide 4"></span><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+        <!-- <ul class="in-zp-ul in-zp-ul1 gallery">
+
+
+
+
+            </ul>-->
+        <ul class="in-zp-ul in-zp-ul1 gallery">
+            {{range .worksList}}
+            <li>
+                <a href="{$v.pic}"><!--bthumb-->
+                    <img src="{{.Pic}}" alt="{{.Id}}">
+                    <div class="div">
+                        <div class="ndiv">
+                            <!-- <h3>10</h3>
+                                    <h4></h4>-->
+                            <h3>{{.Id}}</h3>
+                            <h4>{{.Id}}</h4>
+                            <b>查看详情</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{end}}
+        </ul>
+    </section>
+
+
+    <section class="section section5 bk191919">
+
+        <div class="clearfix inner1380">
+
+
+            <div class="sm-title">
+
+                <ul class="sm-ul">
+
+
+                    <li>
+
+                        <p class="text">70</p>
+
+                        <p class="sm">员工</p>
+
+                    </li>
+
+
+                    <li>
+
+                        <p class="text">100+</p>
+
+                        <p class="sm">客户</p>
+
+                    </li>
+
+
+                    <li>
+
+                        <p class="text">100+</p>
+
+                        <p class="sm">服务项目</p>
+
+                    </li>
+
+
+                </ul>
+
+
+                <h3 class="h3ti" style="color:#ffdb14;margin-bottom: 0;">{{.config.CompanyName}}的使命</h3>
+
+                <h3 class="h3ti" style="margin-top: 10px;">让虚拟世界更加美丽</h3>
+
+                <p class="pcon">
+                    我们是定位于游戏、影视2D原画以及概念设计的美术外包团队，我们专精于2D原画设定，同时能承接由2D到3D建模，动作特效全流程的游戏美术外包。团队成立于2016年，目前团队人数70人，由来自国内外行业顶尖的概念设计师、插画师组成。</p>
+
+            </div>
+
+            <ul class="sm-bo-ul">
+                <li>
+                    <img src="/static/index/image/20180928092947119.png" alt="原画主美">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.ZM}}</p>
+                    <p class="co">原画主美</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20180928092916410.png" alt="高级原画设计师">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.YH}}</p>
+                    <p class="co">高级原画设计师</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20180928092854962.png" alt="高级UI设计师">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.UI}}</p>
+                    <p class="co">高级UI设计师</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20180928092833830.png" alt="美术总监">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.MS}}</p>
+                    <p class="co">美术总监</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20180928092809811.png" alt="项目管理">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.XM}}</p>
+                    <p class="co">项目管理</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20180928092744225.png" alt="商务人员">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.SW}}</p>
+                    <p class="co">商务人员</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20181016050930362.png" alt="运营">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.YY}}</p>
+                    <p class="co">运营</p>
+                </li>
+                <li>
+                    <img src="/static/index/image/20180928092659862.png" alt="推广">
+                    <p class="text">vacancies</p>
+                    <p class="to">{{.configteam.TG}}</p>
+                    <p class="co">推广</p>
+                </li>
+
+            </ul>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="section section6 bk191919">
+
+
+        <div class="seciton-tilte">
+
+            <p><img src="/static/index/image/hezuo.png"></p>
+
+            <h4>OUR MISSION IS THE CREATOR OF VIRTUAL WORLD BEAUTY, THE TOP GAME CONCEPT DESIGN TEAM.</h4>
+
+        </div>
+
+
+        <div class="center">
+
+            <div class="se6p-img">
+
+                <img src="/static/index/image/linkw.png">
+
+            </div>
+
+            <ul class="lx-ab-ul">
+
+
+                <li><a><img src="/static/index/image/20190115043857297.png" alt="10"></a></li>
+
+
+                <li><a><img src="/static/index/image/20190115114301561.png" alt="9"></a></li>
+
+
+                <li><a><img src="/static/index/image/20181016045056974.jpg" alt="8"></a></li>
+
+
+                <li><a><img src="/static/index/image/20190717111658816.png" alt="7"></a></li>
+
+
+                <li><a><img src="/static/index/image/20181016045120684.jpg" alt="6"></a></li>
+
+
+                <li><a><img src="/static/index/image/20181016045149185.jpg" alt="4"></a></li>
+
+
+                <li><a><img src="/static/index/image/20181016045158239.jpg" alt="3"></a></li>
+
+
+                <li><a><img src="/static/index/image/20181016045209205.jpg" alt="2"></a></li>
+
+
+            </ul>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="section section7 bk191919 clearfix" id="liuyan">
+
+
+        <div class="seciton-tilte">
+
+            <p><img src="/static/index/image/lianxi.png"></p>
+
+            <h4>OUR MISSION IS THE CREATOR OF VIRTUAL WORLD BEAUTY, THE TOP GAME CONCEPT DESIGN TEAM.</h4>
+
+        </div>
+
+        <div class="inner1100 clearfix">
+
+
+            <div class="fl">
+
+                <form method="post" action="/liuyan" name="myform" id="myform">
+
+                    <input type="hidden" name="formid" value="18">
+
+                    <input type="hidden" name="siteid" value="1">
+
+                    <input type="hidden" name="dosubmit" value="1">
+
+                    <div><input type="text" id="msgName1" name="name" placeholder="姓名*"></div>
+
+                    <div><input type="text" name="mobile" id="msgTel1" placeholder="电话*"></div>
+
+                    <div><textarea placeholder="留言*" id="msgContext1" name="nr" style="resize:none;"></textarea>
+                    </div>
+
+                    <div style="border: none;"><input type="button" onclick="commSubmitmsg1()" value="提交"
+                                                      class="sumbit"></div>
+
+                </form>
+
+                <script type="text/javascript">
+
+                    function commSubmitmsg1() {
+
+                        var msgName = $('#msgName1').val();
+
+                        var msgTel = $('#msgTel1').val();
+
+                        var msgContext = $('#msgContext1').val();
+
+                        var msgemail = $('#msgemail').val();
+                        ;
+
+                        if (msgName == "") {
+
+                            alert("请输入正确的姓名");
+
+                            $("#msgName1").focus();
+
+                            return false;
+
+                        }
+
+                        if (msgTel == "") {
+
+                            alert("请输入正确的手机号码");
+
+                            $("#msgTel1").focus();
+
+                            return false;
+
+                        }
+
+                        if (msgContext == "") {
+
+                            alert("请输入咨询的详细内容");
+
+                            $("#msgContext1").focus();
+
+                            return false;
+
+                        }
+
+
+                        var params = $('#myform').serialize(); //序列化表单的值
+                        $.ajax({
+                            url: '/liuyan', //后台处理程序
+                            type: 'post',       //数据传送方式
+                            dataType: 'json',   //接受数据格式
+                            data: params,       //要传送的数据
+                            success: Response//回传函数(这里是函数名字)
+                        });
+
+                    }
+
+                    function Response(resp) {
+
+                        if (resp.result === 'success') {
+
+                            alert("您的留言我们已经收到，我们会尽快与您联系！");
+
+                            $('#msgName1').val("");
+
+                            $('#msgTel1').val("");
+
+                            $('#msgContext1').val("");
+
+                            //$('#msgemail').val("");
+
+                        } else if (resp.result === 'error') {
+
+                            alert("留言提交失败，请核对信息是否正确！");
+
+                        }
+
+                    }
+
+                </script>
+
+            </div>
+
+
+            <div class="ri">
+
+                <p><img src="/static/index/image/lx-im1.jpg" width="20" height="20" style="width: 20px; height: 20px;">电话：{{.config.Tel}}
+                </p>
+                <p><img src="/static/index/image/1539333452650081.png" alt="1.png">QQ：{{.config.QQ}}&nbsp;</p>
+                <p><img src="/static/index/image/1564717628526960.jpg" alt="微信图片_20190802114650.jpg">微信：{{.config.Wx}}</p>
+                <p><img src="/static/index/image/lx-im3.jpg">邮箱：{{.config.Email}}</p>
+                <p><img src="/static/index/image/lx-im4.jpg"></p>
+                <p><br></p>
+
+
+                <div class="map" id="map"
+                     style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;">
+
+                </div>
+
+                <div>
+                    <img src="/static/index/image/lx-im5.jpg" style=" float:left">
+                    <p>版权所有 {{.config.CompanyName}}&nbsp;<a style="color:#FFF" href="http://www.miitbeian.gov.cn/"
+                                                            target="_blank"
+                                                            rel="nofollow">{{.config.Icp}}</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="co">
+                <ul class="co-ul">
+                    <li>
+                        <img src="{{.config.Qrcode}}" alt="扫码关注我们">
+                        <p>扫码关注我们</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{{template "common/map.html" .}}
+{{template "common/kefu.html" .}}
+</body>
+</html>
+{{end}}

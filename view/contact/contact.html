@@ -1,0 +1,87 @@
+{{define "contact/contact.html"}}
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.cdmoyu.net/list-15-1.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>联系我们 - {{.config.CompanyName}}- 游戏外包公司|游戏美术外包|游戏原画外包</title>
+    <meta name="keywords" content="{{.config.CompanyName}}">
+    <meta name="description"
+          content="{{.configTeam.Desc}}">
+    {{template "common/style.html" .}}
+    <style type="text/css"></style>
+</head>
+
+<body style="">
+{{template "common/phone_head.html" .}}
+<section class="section section1">
+
+    {{template "common/head.html" .}}
+
+    <div class="paage-banner1">
+        <img src="/static/index/image/20180928112812971.jpg">
+        <div class="page-ti">
+            <h2>Contact Us</h2>
+            <p>联系我们</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="a_zxlmenu">
+    <div class="a_zxlmenu_t">联系我们<i class="icon-caret-down"></i></div>
+    <ul class="fl a_zxlmenu_c">
+
+    </ul>
+    <div class="clearboth"></div>
+</section>
+
+
+<section class="sectionny xiangmu-w bk191919" style="padding-bottom: 0;">
+    <div class="clearfix inner1200">
+        <!--       <h2 class="lxh2top">moyu technology</h2>
+                <p class="lxptop">业务合作联系方式</p> -->
+        <ul class="lxwm-ul">
+            <li>
+                <img src="/static/index/image/lxwm1.png">
+                <p>{{.config.Address}}</p>
+            </li>
+            <li>
+                <img src="/static/index/image/lxwm2.png">
+                <p>{{.config.Tel}}</p>
+            </li>
+            <li>
+                <img src="/static/index/image/lxwm3.png">
+                <p>{{.config.Email}}</p>
+            </li>
+            <li>
+                <img src="/static/index/image/lxwm4.png">
+                <p>微信号：{{.config.Wx}}</p>
+            </li>
+            <li>
+                <img src="/static/index/image/lxwm5.png">
+                <p>SKYPE:{{.config.Phone}}</p>
+            </li>
+        </ul>
+
+    </div>
+    <div class="lxmap" id="dituContent"
+         style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;">
+    </div>
+</section>
+
+{{template "common/bottom.html" .}}
+{{template "common/kefu.html" .}}
+{{template "common/map.html" .}}
+
+
+</body>
+</html>
+{{end}}

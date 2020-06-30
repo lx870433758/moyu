@@ -1,0 +1,12 @@
+http:
+  port: 9090
+  readtimeout: 5
+  writetimeout: 10
+
+db:
+  host: 127.0.0.1:3306
+  name: moyu
+  username: root
+  password: 1h4ff85j
+  charset: utf8
+

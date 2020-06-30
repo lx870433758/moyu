@@ -1,0 +1,28 @@
+{{define "common/bottom.html"}}
+<footer class="footer">
+    <div class="clearfix inner1200">
+        <div class="fl">
+            <h2>业务合作联系方式</h2>
+            <p><img src="/static/index/image/lx-im1.jpg" width="20" height="20"
+                    style="width: 20px; height: 20px;">电话：{{.config.Tel}}</p>
+            <p><img src="/static/index/image/1539333452650081.png" alt="1.png">QQ：{{.config.QQ}}
+                &nbsp;</p>
+            <p><img src="/static/index/image/1564717628526960.jpg"
+                    alt="微信图片_20190802114650.jpg">微信：{{.config.Wx}}</p>
+            <p><img src="/static/index/image/lx-im3.jpg">邮箱：{{.config.Email}}</p>
+            <p><img src="/static/index/image/lx-im4.jpg">地址：{{.config.Address}}</p>
+            <p><br></p></div>
+        <div class="ri">
+            <ul class="co-ul">
+                <li>
+                    <img src="{{.config.Qrcode}}" alt="扫码关注我们">
+                    <p>扫码关注我们</p>
+                </li>
+            </ul>
+            <div>
+                <p>版权所有 {{.config.CompanyName}} &nbsp;<a style="color:#FFF" href="http://www.miitbeian.gov.cn/" target="_blank"
+                                      rel="nofollow">{{.config.Icp}}</a> </p></div>
+        </div>
+    </div>
+</footer>
+{{end}}
