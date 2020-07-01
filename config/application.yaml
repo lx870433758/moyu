@@ -7,6 +7,6 @@ db:
   host: 127.0.0.1:3306
   name: moyu
   username: root
-  password: 1h4ff85j
+  password: 123456
   charset: utf8
 
